@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {useEffect, useState} from 'react';
-
+import Item from "./Item"
 
 
 // https://jsonplaceholder.typicode.com/
@@ -73,6 +73,7 @@ useEffect(load,[val3])
     }>click</div>
 
 <div>{val2}</div>
+<Item/>
     <input onChange={(i)=>{
       setVal2(i.target.value);
       if(i.target.value==="*") {
@@ -84,6 +85,7 @@ useEffect(load,[val3])
     val? val.items.map((i)=>{
       return (<div>{i.title}</div>);
     }):""}
+   
     </div>
   );
 }
